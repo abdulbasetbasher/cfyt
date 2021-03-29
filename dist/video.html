@@ -49,38 +49,6 @@ d=-1===d.indexOf("url(")?"url("+d+")":d,1===n.length?t.style.backgroundImage=d:t
 </div>
             </div>
             <div id="hbn"></div>
-<script>
-	var ha_width = document.getElementById('hbn').offsetWidth;
-
-	if(ha_width >= 728){
-		atOptions = {
-			'key' : 'a591fdf109a7f49bcb062d67a3bdb3f8',
-			'format' : 'iframe',
-			'height' : 90,
-			'width' : 728,
-			'params' : {}
-		};
-		document.write('<scr' + 'ipt src="https://destroyedspear.com/a591fdf109a7f49bcb062d67a3bdb3f8/invoke.js"></scr' + 'ipt>');
-	} else if(ha_width >= 468){
-		atOptions = {
-			'key' : '9299522b56776d5d85a78cd6e882fc76',
-			'format' : 'iframe',
-			'height' : 60,
-			'width' : 468,
-			'params' : {}
-		};
-		document.write('<scr' + 'ipt src="https://destroyedspear.com/9299522b56776d5d85a78cd6e882fc76/invoke.js"></scr' + 'ipt>');
-	} else {
-		atOptions = {
-			'key' : '327a00a4d8ade1633ef22f224c31cda4',
-			'format' : 'iframe',
-			'height' : 50,
-			'width' : 320,
-			'params' : {}
-		};
-		document.write('<scr' + 'ipt src="https://destroyedspear.com/327a00a4d8ade1633ef22f224c31cda4/invoke.js"></scr' + 'ipt>');
-	}
-</script>
             <%=description.replace(/(?:\r\n|\r|\n)/g, '<br>')%>
           </div>
           <div class="4 col">
@@ -114,7 +82,14 @@ d=-1===d.indexOf("url(")?"url("+d+")":d,1===n.length?t.style.backgroundImage=d:t
           s.async = true;
           document.getElementsByTagName('head')[0].appendChild(s);
         }
-
+	
+	function add_banner(url) {
+          s = document.createElement('script');
+          s.src = url;
+          s.async = true;
+          document.getElementById('hbn').appendChild(s);
+        }
+	
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'https://m.trending.network/api/video/'+video_id);
         xhr.onload = function() {
@@ -137,6 +112,37 @@ d=-1===d.indexOf("url(")?"url("+d+")":d,1===n.length?t.style.backgroundImage=d:t
               add_script("https://destroyedspear.com/10/57/97/105797c9b93d732f58736f21ca431843.js");
               add_script("https://destroyedspear.com/97/66/cc/9766cc9a1684cd8f5fbf4e9fed94c6d4.js");
               add_script("https://static.addtoany.com/menu/page.js");
+	      var ha_width = document.getElementById('hbn').offsetWidth;
+
+	if(ha_width >= 728){
+		atOptions = {
+			'key' : 'a591fdf109a7f49bcb062d67a3bdb3f8',
+			'format' : 'iframe',
+			'height' : 90,
+			'width' : 728,
+			'params' : {}
+		};
+		
+		add_banner("https://destroyedspear.com/a591fdf109a7f49bcb062d67a3bdb3f8/invoke.js");
+	} else if(ha_width >= 468){
+		atOptions = {
+			'key' : '9299522b56776d5d85a78cd6e882fc76',
+			'format' : 'iframe',
+			'height' : 60,
+			'width' : 468,
+			'params' : {}
+		};
+		add_banner("https://destroyedspear.com/9299522b56776d5d85a78cd6e882fc76/invoke.js");
+	} else {
+		atOptions = {
+			'key' : '327a00a4d8ade1633ef22f224c31cda4',
+			'format' : 'iframe',
+			'height' : 50,
+			'width' : 320,
+			'params' : {}
+		};
+		add_banner("https://destroyedspear.com/327a00a4d8ade1633ef22f224c31cda4/invoke.js");
+	}
           }
         else {
                 console.log('Request failed.  Returned status of ' + xhr.status);
@@ -145,20 +151,5 @@ d=-1===d.indexOf("url(")?"url("+d+")":d,1===n.length?t.style.backgroundImage=d:t
         xhr.send();
     </script>
 <hr>
-<script>(function(p,u,s,h,x){
-        h=u.getElementsByTagName('head')[0];
-        x=u.createElement('script');
-        x.async=1;x.src=s;
-        x.onload=function(){
-            p.tcpusher('init', {
-                serviceWorkerPath: '/hHxXyYxV.js',
-                tube: 'tcpublisher',
-                sub: 1007364903,
-                tcid: 6965
-            })};
-        h.appendChild(x);
-    })(window,document,'https://sw.wpush.org/script/main.js?promo=21593&tcid=6965&src=1007364903');
-</script>
-
 </body>
 </html>
