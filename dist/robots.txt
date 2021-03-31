@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+
+Disallow: /*porn*
+Disallow: /*sex*
+Disallow: /*سكس*
+Disallow: /*رقص*
+Disallow: /*nude*
+Disallow: /*naked*
+Disallow: /*18+*
+Disallow: /*+18*
+Disallow: /*fart*
+Disallow: /*vore*
+Disallow: /*fuck*
+Disallow: /*booty*
+Disallow: /*xxx*
+Disallow: /*twerk*
+Disallow: /*lesbian*
+Disallow: /*boob*
+Disallow: /*seksi*
+Disallow: /*p*rn*
+Disallow: /*s*x*
+
+# go away ltx71
+User-agent: ltx71 - (http://ltx71.com/)
+Disallow: /
+
+# no yandex anymore
+User-agent: Yandex
+Disallow: /
+
+# block seo tools bots
+User agent: MTRobot
+Disallow: /
+
+User-agent: AhrefsBot 
+Disallow:/
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: Mail.RU_Bot 
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
